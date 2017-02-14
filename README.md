@@ -1,4 +1,4 @@
-# Neural-Network
+# Neural Network
 This is a Neural Network class I created in Python (version 2.X) along with some test data. It also uses numpy.
 For instructions installing NumPy, visit this page: http://scipy.org/install.html .
 
