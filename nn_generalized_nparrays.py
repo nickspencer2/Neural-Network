@@ -210,22 +210,6 @@ class NeuralNetwork:
                 self.layers.append(NeuronLayer(size=self.layer_sizes[i], num_inputs=ni, biases=biases[i]))
             else:
                 self.layers.append(NeuronLayer(size=self.layer_sizes[i], num_inputs=ni))
-        
-    def init_h_weights(self, weights):
-        for hiddenneuron in self.hidden_layer.neurons:
-            for i in xrange(self.num_inputs):
-                if weights:
-                    hiddenneuron.weights.append(weights[i])
-                else:
-                    hiddenneuron.weights.append(np.random.randn())
-        
-    def init_o_weights(self, weights):
-        for outputneuron in self.output_layer.neurons:
-            for i in xrange(self.num_hidden):
-                if weights:
-                    outputneuron.weights.append(weights[i])
-                else:
-                    outputneuron.weights.append(np.random.randn())
                 
     def feedforward(self, inputs):
         out = inputs
